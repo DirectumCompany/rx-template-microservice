@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using CustomWebAPI;
+using CustomWebAPI.IntegrationServicesClient;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using NLog;
 using NLog.Web;
 using Sungero.Logging;
 
@@ -15,6 +16,7 @@ namespace CustomWebAPI
 {
   public class Program
   {
+
     public static void Main(string[] args)
     {
       Logs.Сonfiguration.Configure();

@@ -22,17 +22,48 @@
 
   <ItemGroup>
     <PackageReference Include="ConfigSettings" Version="1.0.12" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.4.10" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="SoapCore" Version="1.1.0.30" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>..\..\lib\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>..\..\lib\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core">
+      <HintPath>..\..\lib\Microsoft.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm">
+      <HintPath>..\..\lib\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial">
+      <HintPath>..\..\lib\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.OData.Client.Core">
+      <HintPath>..\..\lib\Simple.OData.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.OData.Client.Dynamic">
+      <HintPath>..\..\lib\Simple.OData.Client.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.OData.Client.V3.Adapter">
+      <HintPath>..\..\lib\Simple.OData.Client.V3.Adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.OData.Client.V4.Adapter">
+      <HintPath>..\..\lib\Simple.OData.Client.V4.Adapter.dll</HintPath>
+    </Reference>
     <Reference Include="Sungero.Logging">
       <HintPath>..\..\lib\Sungero.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <HintPath>..\..\lib\System.Spatial.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -46,6 +77,10 @@
     <None Update="_ConfigSettings.xml.example">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETCore.App" Version="2.1.0" />
   </ItemGroup>
 
 </Project>
