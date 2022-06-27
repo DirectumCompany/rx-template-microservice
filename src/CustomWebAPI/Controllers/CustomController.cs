@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Sungero.Logging;
 
 namespace CustomWebAPI.Host.Controllers
@@ -31,10 +32,12 @@ namespace CustomWebAPI.Host.Controllers
 
     // POST: api/Custom
     [HttpPost]
-    public void Post([FromBody] string value)
+    public IActionResult Post([FromBody] CustomWebAPI.Models.UserViewModel model)
     {
-      logger.Debug($"POST value: {value}");
+      var jsonReturn = JsonConvert.SerializeObject(model);
+      return Ok(jsonReturn);
     }
+
 
     // PUT: api/Custom/5
     [HttpPut("{id}")]
