@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="ConfigSettings" Version="1.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="NLog" Version="5.0.0" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="6.0.0" />
   </ItemGroup>

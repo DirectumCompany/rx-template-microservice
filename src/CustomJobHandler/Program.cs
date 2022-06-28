@@ -1,4 +1,6 @@
-﻿using Sungero.Logging;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Sungero.Logging;
 using System;
 using System.Threading;
 
@@ -6,17 +8,17 @@ namespace CustomJobHandler
 {
   class Program
   {
-    internal static ILog logger => Logs.GetLogger<Program>();
-
     static void Main(string[] args)
     {
       Logs.Сonfiguration.Configure();
-      logger.Debug("Hello World!!!");
-      while (true)
-      {
-        logger.Info("Doing something....");
-        Thread.Sleep(TimeSpan.FromSeconds(ServiceSettings.Instance.Interval));
-      }
+      CreateHostBuilder(args).Build().Run();
     }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+    Host.CreateDefaultBuilder(args)
+        .ConfigureServices((hostContext, services) =>
+        {
+          services.AddHostedService<CustomJobHandler>();
+        });
   }
 }
