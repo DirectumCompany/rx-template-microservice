@@ -11,4 +11,4 @@
 3. Скопировать архив в \etc\_builds_package
 4. На основе _ConfigSettings.xml.example создать _ConfigSettings.xml в папке \etc\_services_config\<sevice_name>
 5. Добавить в конфиге ServiceRunner'а (\etc\_services_config\ServiceRunner) строку:
-<ServiceSetting Name="<sevice_name>" Config="<sevice_name>\_ConfigSettings.xml" Package="<sevice_name>.zip" ConfigWatcherEnabled="false" Disabled="false" />
+   <ServiceSetting Name="<sevice_name>" Config="<sevice_name>\_ConfigSettings.xml" Package="<sevice_name>.zip" ConfigWatcherEnabled="false" Disabled="false" />
